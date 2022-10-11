@@ -1,0 +1,15 @@
+.app {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+
+	&-wrapper {
+		display: flex;
+		gap: 2rem;
+		flex: 1;
+		margin-top: 4rem;
+
+		&-children {
+			flex: 1;
+		}
+	}
+}
