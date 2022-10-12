@@ -14,12 +14,12 @@
 		"isolatedModules": true,
 		"jsx": "preserve",
 		"incremental": true,
-		"baseUrl": "./app",
+		"baseUrl": "./src",
 		"paths": {
-			"@/components/*": ["/app/components/*"],
-			"@/styles/*": ["/app/styles/*"],
-			"@/utils/*": ["/app/utils/*"],
-			"@/pages/*": ["/app/pages/*"]
+			"@/components/*": ["/src/components/*"],
+			"@/styles/*": ["/src/styles/*"],
+			"@/utils/*": ["/src/utils/*"],
+			"@/pages/*": ["/src/pages/*"]
 		},
 		"plugins": [
 			{

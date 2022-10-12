@@ -1,0 +1,46 @@
+.app {
+	display: grid;
+	//grid-template-rows: auto 1fr auto;
+
+	&-wrapper {
+		width: 100%;
+		display: flex;
+		gap: 2rem;
+		flex: 1;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	&-children {
+		flex: 1;
+		width: 100%;
+	}
+}
+
+.app-sidenav {
+	display: none;
+
+	@media screen and (min-width: 768px) {
+		display: block;
+		width: 100%;
+		max-width: 98px;
+		padding: 0 1rem;
+		ul {
+			.top {
+				width: 3.25rem;
+				padding: 1.85rem 0;
+				background-color: #1a1e1f;
+				margin-bottom: 2rem;
+				border-radius: 2.28rem;
+				text-align: center;
+			}
+			.bottom {
+				text-align: center;
+				width: 3.25rem;
+				background-color: #1a1e1f;
+				border-radius: 2.28rem;
+				padding: 1.85rem 0;
+			}
+		}
+	}
+}
