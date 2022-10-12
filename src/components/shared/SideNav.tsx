@@ -16,7 +16,9 @@ const SideNav = () => {
 					<div className="top">
 						{topNavList.map((nav, i) => (
 							<li className="nav-item py-3" key={i}>
-								<Link href={nav.link}>{nav.icon}</Link>
+								<Link href={nav.link}>
+									<a>{nav.icon}</a>
+								</Link>
 							</li>
 						))}
 					</div>
@@ -24,7 +26,9 @@ const SideNav = () => {
 					<div className="bottom">
 						{bottomNavList.map((nav, i) => (
 							<li className="nav-item py-3" key={i}>
-								<Link href={nav.link}>{nav.icon}</Link>
+								<Link href={nav.link}>
+									<a>{nav.icon}</a>
+								</Link>
 							</li>
 						))}
 					</div>

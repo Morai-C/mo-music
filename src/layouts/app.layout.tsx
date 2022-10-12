@@ -9,7 +9,7 @@ const AppLayout: React.FC<{ children: ReactElement }> = ({ children }) => {
 				<HeaderComp />
 				<div className="app-wrapper">
 					<SideNav />
-					<main className="app-children bg-info">{children}</main>
+					<main className="app-children container bg-info">{children}</main>
 				</div>
 				<p className="bg-success">footerComp</p>
 			</div>

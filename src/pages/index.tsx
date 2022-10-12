@@ -12,11 +12,15 @@ const Home: NextPage = () => {
 			</Head>
 
 			<AppLayout>
-				<div className="py-3">
-					<div className="search-input">
-						<i className="fas fa-magnifying-glass"></i>
-						<input type="text" placeholder="Search artists" />
-					</div>
+				<div className="app-home py-3">
+					<form className="search d-none d-md-block py-3">
+						{/* <i className="fas fa-magnifying-glass"></i> */}
+						<input
+							//className="form-control"
+							type="text"
+							placeholder="Search artists"
+						/>
+					</form>
 					<p>Hello</p>
 				</div>
 			</AppLayout>
