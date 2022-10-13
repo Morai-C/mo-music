@@ -1,15 +1,33 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import { LIGHT_COLOR } from "../../utils/Theme";
 import LogoIcon from "../icons/LogoIcon";
+import { bottomNavList, topNavList } from "./navList";
 
 const HeaderComp = () => {
 	const [searchBarMobileActive, setSearchBarMobileActive] = useState(false);
+	const [hamburgerOpen, setHamburgerOpen] = useState(false);
+
+	const toggleHamburger = () => {
+		setHamburgerOpen(!hamburgerOpen);
+	};
 
 	return (
-		<header className="app-header d-md-none bg-danger">
-			<nav className="d-flex container justify-content-between align-items-center">
-				<div className="d-flex">
-					<i className="fa-solid fs-5 text-light fa-pause fa-rotate-90"></i>
+		<header className="app-header d-md-none">
+			<nav className="d-flex justify-content-between align-items-center">
+				<div className="d-flex align-items-center">
+					{hamburgerOpen ? (
+						<i
+							className="fa-solid fs-5 text-light fa-xmark"
+							onClick={toggleHamburger}
+						></i>
+					) : (
+						<i
+							className="fa-solid fs-5 text-light fa-pause fa-rotate-90"
+							onClick={toggleHamburger}
+						></i>
+					)}
+
 					<div className="logo ms-3">
 						<LogoIcon bg={LIGHT_COLOR} />
 					</div>
@@ -44,6 +62,36 @@ const HeaderComp = () => {
 					</form>
 				</div>
 			</nav>
+
+			<div
+				className={`container  ${
+					hamburgerOpen ? "hamburger animate__bounceIn" : "d-none"
+				}`}
+			>
+				<ul className="nav flex-column">
+					{topNavList.map((nav, i) => (
+						<li className="nav-item" key={i}>
+							<Link href={nav.link}>
+								<div>
+									<a className="icon">{nav.icon}</a>
+									<a>{nav.name}</a>
+								</div>
+							</Link>
+						</li>
+					))}
+
+					{bottomNavList.map((nav, i) => (
+						<li className="nav-item" key={i}>
+							<Link href={nav.link}>
+								<div>
+									<a className="icon">{nav.icon}</a>
+									<a>{nav.name}</a>
+								</div>
+							</Link>
+						</li>
+					))}
+				</ul>
+			</div>
 		</header>
 	);
 };

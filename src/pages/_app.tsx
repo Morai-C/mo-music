@@ -3,6 +3,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import "@popperjs/core";
 import "../styles/globals.scss";
 import "../styles/style.scss";
+import "animate.css";
 
 if (process.browser) {
 	require("bootstrap/dist/js/bootstrap");

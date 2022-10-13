@@ -1,3 +1,4 @@
+import FooterComp from "components/shared/FooterComp";
 import HeaderComp from "components/shared/HeaderComp";
 import SideNav from "components/shared/SideNav";
 import React, { ReactElement } from "react";
@@ -11,7 +12,7 @@ const AppLayout: React.FC<{ children: ReactElement }> = ({ children }) => {
 					<SideNav />
 					<main className="app-children container bg-info">{children}</main>
 				</div>
-				<p className="bg-success">footerComp</p>
+				<FooterComp />
 			</div>
 		</>
 	);
