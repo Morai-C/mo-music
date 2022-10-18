@@ -2,7 +2,7 @@ import React from "react";
 
 const FooterComp = () => {
 	return (
-		<footer className="">
+		<footer className="d-none">
 			<div className="footer-grid container">
 				<div className="track-information d-flex align-items-center ">
 					<div className="track-image me-2"></div>

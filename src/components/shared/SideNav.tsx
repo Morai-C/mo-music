@@ -6,10 +6,10 @@ import { bottomNavList, topNavList } from "./navList";
 
 const SideNav = () => {
 	return (
-		<aside className="app-sidenav bg-danger py-3">
+		<aside className="app-sidenav bg-danger">
 			<nav>
 				<ul className="nav align-items-center flex-column">
-					<div className="logo py-3">
+					<div className="logo py-1 mb-2">
 						<LogoIcon bg={LIGHT_COLOR} />
 					</div>
 

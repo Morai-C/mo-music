@@ -1,4 +1,5 @@
 .app-home {
+	min-height: inherit;
 	&-top {
 		display: grid;
 		.curated-playlist {
@@ -10,8 +11,18 @@
 		}
 
 		@media screen and (min-width: 768px) {
-			gap: 20px;
+			gap: 30px;
 			grid-template-columns: repeat(2, 1fr);
+			margin-bottom: 3.07rem;
+		}
+	}
+	&-new-releases {
+		//display: grid;
+
+		width: 100%;
+
+		.grid-layout {
+			width: 100%;
 		}
 	}
 }

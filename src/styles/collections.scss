@@ -1,0 +1,13 @@
+@import "./variables";
+
+.collections-page {
+	&-grid {
+		.collection-card {
+			width: 213px;
+			height: 234px;
+			border-radius: 20px;
+			background-color: $primary;
+			padding: 1rem 1rem;
+		}
+	}
+}

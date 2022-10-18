@@ -15,7 +15,7 @@ export const topNavList = [
 	{
 		icon: <CollectionIcon bg={LIGHT_COLOR} />,
 		name: "My Collection",
-		link: "/",
+		link: "/collections",
 	},
 	{
 		icon: <RadioIcon bg={LIGHT_COLOR} />,

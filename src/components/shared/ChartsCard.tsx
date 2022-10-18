@@ -1,9 +1,17 @@
+import Link from "next/link";
 import React from "react";
 
 const ChartsCard: React.FC<{
 	children: React.ReactElement;
-}> = ({ children }) => {
-	return <div className="chart-card">{children}</div>;
+	link: string;
+}> = ({ children, link }) => {
+	return (
+		<div className="chart-card">
+			<Link href={link}>
+				<a>{children}</a>
+			</Link>
+		</div>
+	);
 };
 
 export default ChartsCard;

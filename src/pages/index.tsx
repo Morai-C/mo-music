@@ -1,4 +1,6 @@
+import AlbumCard from "components/shared/AlbumCard";
 import ChartsCard from "components/shared/ChartsCard";
+import SimpleSlider from "components/slide/SimpleSlider";
 import type { NextPage } from "next";
 import Head from "next/head";
 import AppLayout from "../layouts/app.layout";
@@ -13,8 +15,8 @@ const Home: NextPage = () => {
 			</Head>
 
 			<AppLayout>
-				<div className="app-home py-3">
-					<form className="search d-none d-md-block py-3">
+				<div className="app-home py-2 py-lg-0">
+					<form className="search d-none d-md-block py-1 mb-2">
 						{/* <i className="fas fa-magnifying-glass"></i> */}
 						<input
 							//className="form-control"
@@ -22,23 +24,64 @@ const Home: NextPage = () => {
 							placeholder="Search artists"
 						/>
 					</form>
-					<div className="app-home-top">
+					<section className="app-home-top">
 						<div className="curated-playlist">
 							<p>curated palylist</p>
 						</div>
 						<div className="top-charts">
 							<p>Top Charts</p>
-							<ChartsCard>
+							<ChartsCard link="/album">
+								<p>Chart card</p>
+							</ChartsCard>
+							<ChartsCard link="/album">
+								<p>Chart card</p>
+							</ChartsCard>
+							<ChartsCard link="/album">
+								<p>Chart card</p>
+							</ChartsCard>
+							{/* <ChartsCard>
 								<p>Chart card</p>
 							</ChartsCard>
 							<ChartsCard>
 								<p>Chart card</p>
-							</ChartsCard>
-							<ChartsCard>
-								<p>Chart card</p>
-							</ChartsCard>
+							</ChartsCard> */}
 						</div>
-					</div>
+					</section>
+					<section className="app-home-new-releases">
+						<p>New Releases</p>
+						<div className="grid-layout">
+							{/* <SimpleSlider>
+								<div className="d-flex gap-5">
+									<AlbumCard>
+										<p>this is an album card</p>
+									</AlbumCard>
+									<AlbumCard>
+										<p>this is an album card</p>
+									</AlbumCard>
+									<AlbumCard>
+										<p>this is an album card</p>
+									</AlbumCard>
+									<AlbumCard>
+										<p>this is an album card</p>
+									</AlbumCard>
+									<AlbumCard>
+										<p>this is an album card</p>
+									</AlbumCard>
+									<AlbumCard>
+										<p>this is an album card</p>
+									</AlbumCard>
+									<AlbumCard>
+										<p>this is an album card</p>
+									</AlbumCard>
+									<AlbumCard>
+										<p>this is an album card</p>
+									</AlbumCard>
+								</div>
+							</SimpleSlider> */}
+
+							<SimpleSlider />
+						</div>
+					</section>
 				</div>
 			</AppLayout>
 		</>
