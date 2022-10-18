@@ -1,0 +1,10 @@
+@import "./variables";
+
+.chart-card {
+	background-color: $info;
+	width: 100%;
+	max-width: 417px;
+	padding: 1.2rem 1.2rem;
+	border-radius: 20px;
+	margin-bottom: 12px;
+}

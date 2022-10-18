@@ -1,3 +1,4 @@
+import ChartsCard from "components/shared/ChartsCard";
 import type { NextPage } from "next";
 import Head from "next/head";
 import AppLayout from "../layouts/app.layout";
@@ -21,7 +22,23 @@ const Home: NextPage = () => {
 							placeholder="Search artists"
 						/>
 					</form>
-					<p>Hello</p>
+					<div className="app-home-top">
+						<div className="curated-playlist">
+							<p>curated palylist</p>
+						</div>
+						<div className="top-charts">
+							<p>Top Charts</p>
+							<ChartsCard>
+								<p>Chart card</p>
+							</ChartsCard>
+							<ChartsCard>
+								<p>Chart card</p>
+							</ChartsCard>
+							<ChartsCard>
+								<p>Chart card</p>
+							</ChartsCard>
+						</div>
+					</div>
 				</div>
 			</AppLayout>
 		</>

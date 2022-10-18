@@ -1,0 +1,17 @@
+.app-home {
+	&-top {
+		display: grid;
+		.curated-playlist {
+			width: 686px;
+			height: 373px;
+			background-color: brown;
+			border-radius: 40px;
+			padding: 1rem 2rem;
+		}
+
+		@media screen and (min-width: 768px) {
+			gap: 20px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
