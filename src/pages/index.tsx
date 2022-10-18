@@ -1,5 +1,6 @@
 import AlbumCard from "components/shared/AlbumCard";
 import ChartsCard from "components/shared/ChartsCard";
+import SearchBar from "components/shared/SearchBar";
 import SimpleSlider from "components/slide/SimpleSlider";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -16,14 +17,7 @@ const Home: NextPage = () => {
 
 			<AppLayout>
 				<div className="app-home py-2 py-lg-0">
-					<form className="search d-none d-md-block py-1 mb-2">
-						{/* <i className="fas fa-magnifying-glass"></i> */}
-						<input
-							//className="form-control"
-							type="text"
-							placeholder="Search artists"
-						/>
-					</form>
+					<SearchBar />
 					<section className="app-home-top">
 						<div className="curated-playlist">
 							<p>curated palylist</p>

@@ -1,3 +1,4 @@
+import SearchBar from "components/shared/SearchBar";
 import AppLayout from "layouts/app.layout";
 import React from "react";
 
@@ -6,14 +7,7 @@ const ViewAlbum = () => {
 		<>
 			<AppLayout>
 				<div className="album-page">
-					<form className="search d-none d-md-block py-1 mb-2">
-						{/* <i className="fas fa-magnifying-glass"></i> */}
-						<input
-							//className="form-control"
-							type="text"
-							placeholder="Search artists"
-						/>
-					</form>
+					<SearchBar />
 					<section className="album-page-information d-flex flex-column flex-lg-row">
 						<div className="image-cover me-0 me-lg-3">
 							<p>yo this a cover</p>
