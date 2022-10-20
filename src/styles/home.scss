@@ -3,25 +3,32 @@
 	&-top {
 		display: grid;
 		.curated-playlist {
-			width: 686px;
+			max-width: 686px;
+			width: 100%;
 			height: 373px;
-			background-color: brown;
+			background-color: #609eaf;
 			border-radius: 40px;
 			padding: 1rem 2rem;
 		}
+		.top-charts {
+			&-title {
+				font-size: 24px;
+			}
+		}
 
-		@media screen and (min-width: 768px) {
+		@media screen and (min-width: 992px) {
 			gap: 30px;
 			grid-template-columns: repeat(2, 1fr);
-			margin-bottom: 3.07rem;
+			margin-bottom: 3rem;
 		}
 	}
 	&-new-releases {
 		//display: grid;
 
-		width: 100%;
+		//width: 100%;
 
 		.grid-layout {
+			max-width: 90vw;
 			width: 100%;
 		}
 	}

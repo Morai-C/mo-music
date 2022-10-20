@@ -5,42 +5,89 @@ import Slider from "react-slick";
 const SimpleSlider: React.FC = () => {
 	const settings = {
 		dots: false,
-		infinite: true,
-		speed: 2000,
+		infinite: false,
+		//speed: 2000,
 		slidesToShow: 6,
 		slidesToScroll: 1,
-		autoplay: true,
+		autoplay: false,
 		autoplaySpeed: 2000,
-		cssEase: "linear",
+		//cssEase: "linear",
+		arrows: false,
+		//variableWidth: true,
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 5,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: false,
+				},
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: false,
+				},
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: false,
+				},
+			},
+		],
 	};
 
 	return (
-		<div className="slide py-1 row row-cols-1 g-4">
+		<div className="slide-comp py-1">
 			<Slider {...settings}>
-				<AlbumCard>
-					<p>this is an album card</p>
-				</AlbumCard>
-				<AlbumCard>
-					<p>this is an album card</p>
-				</AlbumCard>
-				<AlbumCard>
-					<p>this is an album card</p>
-				</AlbumCard>
-				<AlbumCard>
-					<p>this is an album card</p>
-				</AlbumCard>
-				<AlbumCard>
-					<p>this is an album card</p>
-				</AlbumCard>
-				<AlbumCard>
-					<p>this is an album card</p>
-				</AlbumCard>
-				<AlbumCard>
-					<p>this is an album card</p>
-				</AlbumCard>
-				<AlbumCard>
-					<p>this is an album card</p>
-				</AlbumCard>
+				<div className=" pe-5">
+					<AlbumCard>
+						<p>this is an album card</p>
+					</AlbumCard>
+				</div>
+				<div className=" px-3">
+					<AlbumCard>
+						<p>this is an album card</p>
+					</AlbumCard>
+				</div>
+				<div className=" px-3">
+					<AlbumCard>
+						<p>this is an album card</p>
+					</AlbumCard>
+				</div>
+				<div className=" px-3">
+					<AlbumCard>
+						<p>this is an album card</p>
+					</AlbumCard>
+				</div>
+				<div className=" px-3">
+					<AlbumCard>
+						<p>this is an album card</p>
+					</AlbumCard>
+				</div>
+				<div className=" px-3">
+					<AlbumCard>
+						<p>this is an album card</p>
+					</AlbumCard>
+				</div>
+				<div className=" px-3">
+					<AlbumCard>
+						<p>this is an album card</p>
+					</AlbumCard>
+				</div>
+				<div className=" ps-3">
+					<AlbumCard>
+						<p>this is an album card</p>
+					</AlbumCard>
+				</div>
 			</Slider>
 		</div>
 	);

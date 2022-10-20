@@ -4,6 +4,7 @@ import SearchBar from "components/shared/SearchBar";
 import SimpleSlider from "components/slide/SimpleSlider";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { ChartData } from "utils/Data";
 import AppLayout from "../layouts/app.layout";
 
 const Home: NextPage = () => {
@@ -18,32 +19,40 @@ const Home: NextPage = () => {
 			<AppLayout>
 				<div className="app-home py-2 py-lg-0">
 					<SearchBar />
-					<section className="app-home-top">
+					<section className="app-home-top pt-4">
 						<div className="curated-playlist">
 							<p>curated palylist</p>
 						</div>
 						<div className="top-charts">
-							<p>Top Charts</p>
-							<ChartsCard link="/album">
-								<p>Chart card</p>
-							</ChartsCard>
-							<ChartsCard link="/album">
-								<p>Chart card</p>
-							</ChartsCard>
-							<ChartsCard link="/album">
-								<p>Chart card</p>
-							</ChartsCard>
-							{/* <ChartsCard>
-								<p>Chart card</p>
-							</ChartsCard>
-							<ChartsCard>
-								<p>Chart card</p>
-							</ChartsCard> */}
+							<p className="top-charts-title mb-1">Top Charts</p>
+							{ChartData.map((item, i) => (
+								<div key={i}>
+									<ChartsCard link="/album">
+										<div className="chart-card-inner d-flex justify-content-between">
+											<div className="inner-left d-flex flex-column flex-lg-row align-items-lg-center">
+												<div className="image me-lg-2">
+													<img src={item.img} alt="" />
+												</div>
+												<div className="description">
+													<p className="mb-1 chart-title">{item.title}</p>
+													<span className="chart-author">{item.author}</span>
+													<p className="mb-0 chart-duration ">
+														{item.duration}
+													</p>
+												</div>
+											</div>
+											<div className="inner-right d-flex justify-content-center align-items-center">
+												<i className="fa-regular fa-heart text-secondary"></i>
+											</div>
+										</div>
+									</ChartsCard>
+								</div>
+							))}
 						</div>
 					</section>
 					<section className="app-home-new-releases">
 						<p>New Releases</p>
-						<div className="grid-layout">
+						<div className="grid-layout bg-primary">
 							{/* <SimpleSlider>
 								<div className="d-flex gap-5">
 									<AlbumCard>
