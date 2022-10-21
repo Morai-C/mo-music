@@ -4,6 +4,7 @@ import SearchBar from "components/shared/SearchBar";
 import SimpleSlider from "components/slide/SimpleSlider";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { Avatar, AvatarGroup } from "rsuite";
 import { ChartData } from "utils/Data";
 import AppLayout from "../layouts/app.layout";
 
@@ -20,10 +21,56 @@ const Home: NextPage = () => {
 				<div className="app-home py-2 py-lg-0">
 					<SearchBar />
 					<section className="app-home-top pt-4">
-						<div className="curated-playlist">
-							<p>curated palylist</p>
+						<div className="curated-playlist d-flex flex-column justify-content-between">
+							<p className="curated-text">curated palylist</p>
+							<div className="curated-playlist-type">
+								<p className="title">R & B Hits</p>
+								<p className="songs">
+									All mine, Lie again, Petty call me everyday, <br /> Out of
+									time, No love, Bad habit, <br /> and so much more
+								</p>
+							</div>
+
+							<div className="curated-playlist-stats d-flex align-items-center ">
+								<AvatarGroup stack>
+									<Avatar
+										className="avatar-stack"
+										size="xs"
+										circle
+										src="/images/1.png"
+									/>
+									<Avatar
+										className="avatar-stack"
+										size="xs"
+										circle
+										src="/images/2.png"
+									/>
+									<Avatar
+										className="avatar-stack"
+										size="xs"
+										circle
+										src="/images/3.png"
+									/>
+									<Avatar
+										className="avatar-stack"
+										size="xs"
+										circle
+										src="/images/4.png"
+									/>
+									<Avatar
+										className="avatar-stack"
+										size="xs"
+										circle
+										src="/images/5.png"
+									/>
+								</AvatarGroup>
+
+								<i className="fa-solid fa-heart mx-3"></i>
+
+								<small>33k Likes</small>
+							</div>
 						</div>
-						<div className="top-charts">
+						<div className="top-charts bg-danger">
 							<p className="top-charts-title mb-1">Top Charts</p>
 							{ChartData.map((item, i) => (
 								<div key={i}>
@@ -52,7 +99,7 @@ const Home: NextPage = () => {
 					</section>
 					<section className="app-home-new-releases">
 						<p>New Releases</p>
-						<div className="grid-layout bg-primary">
+						<div className="grid-layout">
 							{/* <SimpleSlider>
 								<div className="d-flex gap-5">
 									<AlbumCard>

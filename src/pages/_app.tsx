@@ -6,6 +6,9 @@ import "@popperjs/core";
 import "../styles/globals.scss";
 import "../styles/style.scss";
 import "animate.css";
+// import "rsuite/dist/rsuite.min.css";
+
+import "../utils/Theme";
 
 if (process.browser) {
 	require("bootstrap/dist/js/bootstrap");

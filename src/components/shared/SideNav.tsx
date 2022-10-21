@@ -6,31 +6,33 @@ import { bottomNavList, topNavList } from "./navList";
 
 const SideNav = () => {
 	return (
-		<aside className="app-sidenav bg-danger">
+		<aside className="app-sidenav">
 			<nav>
 				<ul className="nav align-items-center flex-column">
 					<div className="logo py-1 mb-2">
 						<LogoIcon bg={LIGHT_COLOR} />
 					</div>
 
-					<div className="top">
-						{topNavList.map((nav, i) => (
-							<li className="nav-item py-3" key={i}>
-								<Link href={nav.link}>
-									<a>{nav.icon}</a>
-								</Link>
-							</li>
-						))}
-					</div>
+					<div className="pt-4">
+						<div className="top">
+							{topNavList.map((nav, i) => (
+								<li className="nav-item py-2" key={i}>
+									<Link href={nav.link}>
+										<a>{nav.icon}</a>
+									</Link>
+								</li>
+							))}
+						</div>
 
-					<div className="bottom">
-						{bottomNavList.map((nav, i) => (
-							<li className="nav-item py-3" key={i}>
-								<Link href={nav.link}>
-									<a>{nav.icon}</a>
-								</Link>
-							</li>
-						))}
+						<div className="bottom">
+							{bottomNavList.map((nav, i) => (
+								<li className="nav-item py-2" key={i}>
+									<Link href={nav.link}>
+										<a>{nav.icon}</a>
+									</Link>
+								</li>
+							))}
+						</div>
 					</div>
 				</ul>
 			</nav>

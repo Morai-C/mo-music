@@ -1,6 +1,7 @@
 import AlbumCard from "components/shared/AlbumCard";
 import React from "react";
 import Slider from "react-slick";
+import { NewReleases } from "utils/Data";
 
 const SimpleSlider: React.FC = () => {
 	const settings = {
@@ -48,7 +49,14 @@ const SimpleSlider: React.FC = () => {
 	return (
 		<div className="slide-comp py-1">
 			<Slider {...settings}>
-				<div className=" pe-5">
+				{NewReleases.map((items, i) => (
+					<div className=" pe-5" key={i}>
+						<AlbumCard image={`url(${items.img})`}>
+							<p>this is an album card</p>
+						</AlbumCard>
+					</div>
+				))}
+				{/* <div className=" pe-5">
 					<AlbumCard>
 						<p>this is an album card</p>
 					</AlbumCard>
@@ -87,7 +95,7 @@ const SimpleSlider: React.FC = () => {
 					<AlbumCard>
 						<p>this is an album card</p>
 					</AlbumCard>
-				</div>
+				</div> */}
 			</Slider>
 		</div>
 	);

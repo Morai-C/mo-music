@@ -18,3 +18,24 @@ export const ChartData = [
 		duration: "2:01:25",
 	},
 ];
+
+export const NewReleases = [
+	{
+		img: "/images/release_1.png",
+	},
+	{
+		img: "/images/release_2.png",
+	},
+	{
+		img: "/images/release_3.png",
+	},
+	{
+		img: "/images/release_4.png",
+	},
+	{
+		img: "/images/release_5.png",
+	},
+	{
+		img: "/images/release_2.png",
+	},
+];

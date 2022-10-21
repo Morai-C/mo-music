@@ -7,7 +7,7 @@ const ChartsCard: React.FC<{
 }> = ({ children, link }) => {
 	return (
 		<div className="chart-card">
-			<Link href={link}>
+			<Link id="link" className="link" href={link}>
 				<a>{children}</a>
 			</Link>
 		</div>
