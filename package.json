@@ -18,11 +18,13 @@
 		"dayjs": "^1.11.3",
 		"next": "12.2.2",
 		"react": "^18.2.0",
+		"react-data-table-component": "^7.5.3",
 		"react-dom": "^18.2.0",
 		"react-slick": "^0.29.0",
 		"rsuite": "^5.19.1",
 		"sass": "^1.53.0",
 		"slick-carousel": "^1.8.1",
+		"styled-components": "^5.3.6",
 		"timeago.js": "^4.0.2"
 	},
 	"devDependencies": {

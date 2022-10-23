@@ -7,6 +7,7 @@ const AppLayout: React.FC<{ children: ReactElement }> = ({ children }) => {
 	return (
 		<>
 			<div className="app">
+				<div className="overlay"></div>
 				<HeaderComp />
 				<div className="app-wrapper">
 					<SideNav />
