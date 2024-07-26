@@ -70,7 +70,7 @@ const Home: NextPage = () => {
 								<small>33k Likes</small>
 							</div>
 						</div>
-						<div className="top-charts bg-danger">
+						<div className="top-charts">
 							<p className="top-charts-title mb-1">Top Charts</p>
 							{ChartData.map((item, i) => (
 								<div key={i}>
